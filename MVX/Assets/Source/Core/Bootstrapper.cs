@@ -24,7 +24,7 @@ namespace Core
             damageListener = playerView.GetComponent<DamageListener>();
             playerModel = new PlayerModel();
             damageListener.Initialize(playerModel);
-            playerView.Initialize(playerModel);
+            PlayerController playerController = new PlayerController(playerModel, playerView);
 
             playerMovementController = new PlayerMovementController(playerMovementModel, playerMovement, playerInput);
         }
